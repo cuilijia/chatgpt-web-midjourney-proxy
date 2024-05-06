@@ -39,6 +39,7 @@ export default defineConfig((env) => {
         '@': path.resolve(process.cwd(), 'src'),
       },
     },
+		base: '/professional',
     plugins: setupPlugins(viteEnv),
     server: {
       host: '0.0.0.0',
@@ -57,19 +58,19 @@ export default defineConfig((env) => {
         },
          '/sunoapi': {
           target: viteEnv.VITE_APP_API_BASE_URL,
-          changeOrigin: true, // 允许跨域  
+          changeOrigin: true, // 允许跨域
         },
          '/uploads': {
           target: viteEnv.VITE_APP_API_BASE_URL,
           changeOrigin: true, // 允许跨域
           //rewrite: path => path.replace('/api/', '/'),
-        }, 
+        },
         '/openapi': {
           target: viteEnv.VITE_APP_API_BASE_URL,
           changeOrigin: true, // 允许跨域
           //rewrite: path => path.replace('/api/', '/'),
         },
-        
+
       },
     },
     build: {
