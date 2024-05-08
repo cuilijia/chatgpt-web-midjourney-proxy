@@ -39,7 +39,7 @@ export default defineConfig((env) => {
         '@': path.resolve(process.cwd(), 'src'),
       },
     },
-		base: '/professional',
+		base: '/chatmj',
     plugins: setupPlugins(viteEnv),
     server: {
       host: '0.0.0.0',
